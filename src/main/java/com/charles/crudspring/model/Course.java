@@ -1,5 +1,7 @@
 package com.charles.crudspring.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,6 +15,7 @@ import lombok.Data;
 public class Course {
     
     @Id
+    @JsonProperty("_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 

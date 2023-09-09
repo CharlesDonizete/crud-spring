@@ -45,11 +45,8 @@ public class CourseController {
 
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
-    public Course create(@RequestBody @Valid Course course){
-        //System.out.println(course.getName());
-        return courseRepository.save(course);
-        // return ResponseEntity.status(HttpStatus.CREATED)
-        //     .body(courseRepository.save(course));
+    public Course create(@RequestBody @Valid Course course){        
+        return courseRepository.save(course);        
     }
 
     @PutMapping("/{id}")

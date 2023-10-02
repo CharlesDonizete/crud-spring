@@ -1,0 +1,46 @@
+GET http://localhost:8080/api/courses
+
+###
+GET http://localhost:8080/api/courses/abc
+
+
+###
+POST http://localhost:8080/api/courses HTTP/1.1
+content-type: application/json
+
+{
+    "name":"Angular",   
+    "category": "Front-end",
+    "lessons": [
+        {
+            "name": "Introdução",
+            "youtubeUrl": "1234567890"
+        },
+        {
+            "name": "Introdução2",
+            "youtubeUrl": "1234567890"
+        }
+    ]
+}
+
+###
+PUT http://localhost:8080/api/courses/-1 HTTP/1.1
+content-type: application/json
+
+{
+    
+    "name": "Angular com Spring sss",
+    "category": "Front-end",
+    "lessons": [
+      {
+        "id": 1,
+        "name": "Introdução",
+        "youtubeUrl": "watch?v=30"
+      },
+      {
+        "id": 2,
+        "name": "Introdução",
+        "youtubeUrl": "watch?v=20"
+      }
+    ]
+}

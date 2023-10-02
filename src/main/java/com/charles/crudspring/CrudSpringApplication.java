@@ -33,14 +33,14 @@ public class CrudSpringApplication {
 
 			Lesson l = new Lesson();
 			l.setName("Introdução");
-			l.setYoutubeUrl("watch?v=3");
+			l.setYoutubeUrl("watch?v=30");
 			l.setCourse(c);
 
 			c.getLessons().add(l);
 
 			Lesson l3 = new Lesson();
 			l3.setName("Introdução");
-			l3.setYoutubeUrl("watch?v=2");
+			l3.setYoutubeUrl("watch?v=20");
 			l3.setCourse(c);
 
 			c.getLessons().add(l3);
@@ -53,7 +53,7 @@ public class CrudSpringApplication {
 
 			Lesson l1 = new Lesson();
 			l1.setName("Introdução 2");
-			l1.setYoutubeUrl("watch?v=1");
+			l1.setYoutubeUrl("watch?v=10");
 			l1.setCourse(c1);
 
 			c1.getLessons().add(l1);
@@ -66,7 +66,7 @@ public class CrudSpringApplication {
 
 			Lesson l2 = new Lesson();
 			l2.setName("Introdução 3");
-			l2.setYoutubeUrl("watch?v=1");
+			l2.setYoutubeUrl("watch?v=10");
 			l2.setCourse(c2);
 
 			c2.getLessons().add(l2);

@@ -27,51 +27,26 @@ public class CrudSpringApplication {
 
 			List<Course> courses = new ArrayList<Course>();
 
-			Course c = new Course();
-			c.setName("Angular com Spring ");
-			c.setCategory(Category.FRONT_END);
+			for (int i = 0; i < 20; i++) {
+				Course c = new Course();
+				c.setName("Angular com Spring " + i);
+				c.setCategory(Category.FRONT_END);
 
-			Lesson l = new Lesson();
-			l.setName("Introdução");
-			l.setYoutubeUrl("watch?v=30");
-			l.setCourse(c);
+				Lesson l = new Lesson();
+				l.setName("Introdução");
+				l.setYoutubeUrl("watch?v=30");
+				l.setCourse(c);
 
-			c.getLessons().add(l);
+				c.getLessons().add(l);
 
-			Lesson l3 = new Lesson();
-			l3.setName("Introdução");
-			l3.setYoutubeUrl("watch?v=20");
-			l3.setCourse(c);
+				Lesson l3 = new Lesson();
+				l3.setName("Introdução");
+				l3.setYoutubeUrl("watch?v=20");
+				l3.setCourse(c);
 
-			c.getLessons().add(l3);
-
-			courses.add(c);
-
-			Course c1 = new Course();
-			c1.setName("Spring");
-			c1.setCategory(Category.BACK_END);
-
-			Lesson l1 = new Lesson();
-			l1.setName("Introdução 2");
-			l1.setYoutubeUrl("watch?v=10");
-			l1.setCourse(c1);
-
-			c1.getLessons().add(l1);
-
-			courses.add(c1);
-
-			Course c2 = new Course();
-			c2.setName("ExtJS");
-			c2.setCategory(Category.FRONT_END);
-
-			Lesson l2 = new Lesson();
-			l2.setName("Introdução 3");
-			l2.setYoutubeUrl("watch?v=10");
-			l2.setCourse(c2);
-
-			c2.getLessons().add(l2);
-
-			courses.add(c2);
+				c.getLessons().add(l3);
+				courses.add(c);
+			}
 
 			courseRepository.saveAll(courses);
 
